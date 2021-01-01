@@ -1,0 +1,14 @@
+.shad{
+    box-shadow: 3px 3px #a4b0be;
+    height: auto;
+    overflow: hidden;
+}
+.ajout{
+    display: flex;
+    flex-direction: row-reverse;
+    padding-right: 60px;
+}
+
+.resp{
+    overflow-x:auto;
+}

@@ -1,0 +1,28 @@
+<div class="card">
+    <div class="card-header ">
+    <div class="ds">
+        <div class="brand">
+           <span><i class="fas fa-book mx-2"></i> Books </span> 
+        </div>
+        <div *ngIf="onStock" class="stock-sucess" >
+            On Stock
+        </div>
+        <div *ngIf="!onStock" class="stock-danger" >
+            Out Stock
+        </div>
+    </div>
+        
+    </div>
+    <div class="card-body">
+        <div class="img-container p-5">
+            <img src="{{picture}}" class="card-img-top">
+        </div>
+       <div class="ds">
+            <h5 class="card-title">{{title}}</h5>
+            <p class="card-text">{{price}}<span class="mx-1"> DT </span></p>
+       </div> 
+     <div class="card-footer">
+        <button *ngIf="onStock"  class="cart-btn"> <i class="fas fa-cart-plus"></i>Add To cart </button>
+     </div> 
+    </div>
+  </div>

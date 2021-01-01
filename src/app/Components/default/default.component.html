@@ -1,0 +1,14 @@
+<mat-drawer-container>
+
+    <mat-drawer mode="side" [opened]="sideBarOpen">
+        <app-side-bar></app-side-bar>
+    </mat-drawer>
+   
+    <mat-drawer-content>
+     <app-nav-bar (toggleSideBarForMe)="sideBarToggler()"></app-nav-bar>
+        <div class="date"><i class="fas fa-calendar-alt mx-2"></i> {{date | date:'dd/MM/yyyy'}}</div>
+        
+        <router-outlet ></router-outlet>
+    </mat-drawer-content>
+</mat-drawer-container>
+

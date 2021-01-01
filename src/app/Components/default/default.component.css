@@ -1,0 +1,18 @@
+mat-drawer-content{
+    margin: 0;
+    background-color: #f1f2f6;
+    overflow: auto;
+}
+mat-drawer{
+    width:250px;
+    overflow: hidden;
+}
+mat-drawer-container{
+    height: 100%;
+}
+.date{
+    right:10px; position: absolute; margin-top: 10px;
+    font-size: 18px;
+    font-weight: bold;
+    color:#665642;
+}
