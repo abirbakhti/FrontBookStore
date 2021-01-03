@@ -27,7 +27,7 @@
 
 .card{
     transition: all 0.2s linear;
-    height: 450px;
+    height: 100%;
 }
 
 .card:hover{

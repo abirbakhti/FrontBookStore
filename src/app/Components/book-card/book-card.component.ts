@@ -1,5 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { CheckboxControlValueAccessor } from '@angular/forms';
+import { CartService } from 'src/app/Service/cart.service';
 
 @Component({
   selector: 'app-book-card',
@@ -8,24 +8,36 @@ import { CheckboxControlValueAccessor } from '@angular/forms';
 })
 export class BookCardComponent implements OnInit {
   onStock;
-  @Input() public title;
-  @Input() public price=100;
-  @Input() public picture="../../assets/book1.jpg";
-  @Input() public quantity;
-  
-  constructor() { }
+  onCart;
+  title;
+  price;
+  picture;
+  quantity;
+  @Input() book;
+
+  constructor(public cartService:CartService) { }
 
   ngOnInit(): void {
-    this.onStock=this.CheckStock();
+    this.title = this.book.title;
+    this.price = this.book.price;
+    this.quantity = this.book.quantity;
+    this.picture=this.book.picture;
+    this.onStock = this.CheckStock();
   }
 
-  CheckStock(){
-    if(this.quantity>=1){
+  CheckStock() {
+    if (this.quantity >= 1) {
       return true;
-    }else{
+    } else {
       return false;
     }
-    
+  }
+
+
+
+  addToCart(){
+    this.cartService.addToCart(this.book);
+    console.log(this.book)
   }
 
 }

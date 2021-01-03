@@ -6,8 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-bar.component.css']
 })
 export class SideBarComponent implements OnInit {
-  firstName="Ahmed";
-  lastName="Razgui";
+  firstName = sessionStorage.getItem('username'); 
+
   constructor() { }
 
   ngOnInit(): void {

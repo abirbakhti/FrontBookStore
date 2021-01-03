@@ -1,0 +1,36 @@
+<mat-card class="shad m-5">
+    <div class="container my-4">
+        <h1 class="text-center">My Commands</h1>
+    </div>
+
+
+    <div class="mx-5 my-5 resp ">
+        <table class="table" *ngIf="length!=0;else elseBlock">
+           
+            <thead class="thead-dark">
+                <tr>
+                    <th class="text-center">Command ID  </th>
+                    <th class="text-center">Command date</th>
+                    <th class="text-center">Total Price</th>
+                    <th class="text-center">Details</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let c of commands">
+                    <th class="text-center">{{c.id}}</th>
+                    <th class="text-center">{{c.date | date:'dd/MM/yyyy'}}</th>
+                    <th class="text-center">{{c.totalPrice}} <span class="mx-1">DT</span></th>
+                    <th class="text-center">
+                        <a (click)="showDetail(c.id)" class="cur"><span><i class="fas fa-bars mx-2"></i> Show detail</span>  </a>
+                    </th>
+                </tr>
+            </tbody>
+        </table>
+        <ng-template #elseBlock>
+            <div class="alert alert-secondary text-center" role="alert">
+                There is no Commands 
+            </div>
+        </ng-template>
+    </div>
+</mat-card> 
+

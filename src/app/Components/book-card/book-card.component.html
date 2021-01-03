@@ -22,7 +22,7 @@
             <p class="card-text">{{price}}<span class="mx-1"> DT </span></p>
        </div> 
      <div class="card-footer">
-        <button *ngIf="onStock"  class="cart-btn"> <i class="fas fa-cart-plus"></i>Add To cart </button>
+        <button *ngIf="onStock"  class="cart-btn " (click)="addToCart()"> <i class="fas fa-cart-plus" ></i>Add To cart </button>
      </div> 
     </div>
   </div>

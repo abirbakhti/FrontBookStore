@@ -1,0 +1,13 @@
+.right{
+    float: right;
+}
+
+.cur{
+    cursor: pointer;
+}
+
+.pos{
+    display: flex;
+    justify-content: flex-end;
+    margin : 0px 20px;
+}

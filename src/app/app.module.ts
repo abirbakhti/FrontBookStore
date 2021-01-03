@@ -27,6 +27,11 @@ import { NavBarComponent } from './Components/nav-bar/nav-bar.component';
 import { DefaultComponent } from './Components/default/default.component';
 import { MatNativeDateModule } from '@angular/material/core';
 import { LoginComponent } from './Components/login/login.component';
+import { CartComponent } from './Components/cart/cart.component';
+import { BookManagementComponent } from './Components/book-management/book-management.component';
+import { CommandComponent } from './Components/command/command.component';
+import { CommandDetailComponent } from './Components/command-detail/command-detail.component';
+import { HomeComponent } from './Components/home/home.component';
 
 
 @NgModule({
@@ -39,6 +44,11 @@ import { LoginComponent } from './Components/login/login.component';
     NavBarComponent,
     DefaultComponent,
     LoginComponent,
+    CartComponent,
+    BookManagementComponent,
+    CommandComponent,
+    CommandDetailComponent,
+    HomeComponent,
 
   ],
   entryComponents:[AddBookComponent]
